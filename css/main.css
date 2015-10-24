@@ -1,0 +1,1474 @@
+/* COLORS *************************************************************
+
+red	           	   -> #931f1d • rgb(147, 31, 29); 
+navy		   	   -> #0D1321 • rgb(13, 19, 33); 
+pale gold          -> #F2D8A7 • rgb(242, 216, 167);
+wedgewood blue     -> #7E8D85 • rgb(126, 141, 133);
+green/grey         -> #BFC3BA • rgb(191, 195, 186);
+		
+***********************************************************************/
+
+/* FONTS **************************************************************	
+
+sans-serif	-> font-family: 'Raleway', sans-serif;
+serif:   	-> font-family: 'Playfair Display', serif;
+
+************************************************************************/
+
+/* Image Sizes *********************************************************	
+
+front page images -> 1000px x 600px
+contact form icons -> 48px x 48px 
+contact form send icon -> 60px x 60px
+social media icons -> 80px x 80px
+backgroun-image (for expanded section) -> 100px x 550px
+portfolio archive thumbnail -> 500px x 500px
+
+************************************************************************/
+
+
+
+/* START OF GLOBAL STYLES **********************************************/
+
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 0 5px;
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+a:hover {
+	color: #fff;
+}
+
+body {
+    color: #f2ede3;
+    background: #333;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* END OF GLOBAL STYLES ************************************************************************/
+
+/* START OF CONTAINER/SECTIONS STYLES **********************************************************/
+
+div.container { 
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	width: 100%;
+	height: 100%; 
+}
+
+
+.bl-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 1;
+	/* Centering with flexbox */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.bl-box h2 {
+	text-align: center;
+	margin: 0;
+	padding: 15%;
+	width: 100%;
+	height: 100%;
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.bl-icon {
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	cursor: pointer;
+	-webkit-font-smoothing: antialiased;
+}
+
+.bl-icon:before {
+	display: block;
+	font-size: 3em;
+	margin-bottom: 10px;
+}
+
+.bl-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; 
+}
+
+.bl-main > section {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	color: rgb(147, 31, 29);
+}
+
+
+.bl-main > section:first-child {
+	top: 0;
+	left: 0;
+	background: rgb(13, 19, 33);
+}
+
+.bl-main > section:nth-child(2) {
+	top: 0;
+	left: 50%;
+	background: rgb(242, 216, 167);
+}
+
+.bl-main > section:nth-child(3) {
+	top: 50%;
+	left: 0;
+	background: rgb(126, 141, 133);
+}
+
+.bl-main > section:nth-child(4) {
+	top: 50%;
+	left: 50%;
+	background: rgb(191, 195, 186);
+}
+
+.bl-main > section .bl-icon-close {
+	position: absolute;
+	top: 20px;
+	right: 24px;
+	cursor: pointer;
+	font-size: 2.5em;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.bl-content, 
+div.bl-panel-items > div > div {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	right: 30px;
+	bottom: 0px;
+	padding: 0 20px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+/* Custom content */
+
+.bl-content article {
+	padding: 20px 40px 20px 0px;
+}
+
+.bl-content article a {
+	color: rgba(0,0,0,0.2);
+}
+
+.bl-content h1{
+	text-align:center;
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+}
+
+.bl-content h2 {
+	font-size: 3em;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+}
+
+.bl-content p {
+	margin: 0 auto;
+	padding-bottom: 15px;
+	font-size: 1.7em;
+	line-height: 1.8;
+}
+
+.bl-content > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+} 
+
+.bl-content > ul li {
+	display: inline-block;
+	width: 20%;
+	margin: 1%;
+}
+
+.bl-content > ul li a {
+	display: block;
+	padding: 0;
+}
+
+.bl-content > ul li a img {
+	display: block;
+	max-width: 100%;
+}
+
+
+.bl-content.portfolio > ul li a img {
+	display: inline-block;
+	max-width: 100%;
+}
+
+
+
+div.bl-box img{
+	position: absolute;
+	left:0;
+	top: 0%;
+	bottom:0;
+	right: 0;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;;
+	margin: 0 auto;
+}
+
+
+div.front-page-tagline{
+	position:absolute;
+	margin: 0 auto;	
+	top: 35%;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	text-align: center;
+	font-family: 'Playfair Display', serif;	
+	font-style: italic;
+}
+
+aside.about,
+aside.contact,
+aside.media,
+aside.portfolio{
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left:0;
+	bottom:0;	
+}
+
+
+
+/* Transition classes and properties */
+/* Separated for a better overview and control */
+
+
+.bl-content,
+.bl-icon-close {
+	-webkit-transition: opacity 0.1s linear 0s;
+	-moz-transition: opacity 0.1s linear 0s;
+	transition: opacity 0.1s linear 0s;
+}
+
+.bl-box h2.bl-icon.bl-icon-about,
+.bl-box h2.bl-icon.bl-icon-contact,
+.bl-box h2.bl-icon.bl-icon-media,
+.bl-box h2.bl-icon.bl-icon-works{
+	height: 100%;
+	z-index: 999;	
+}
+
+.bl-box {
+	-webkit-transition: opacity 0.2s linear 0.5s;
+	-moz-transition: opacity 0.2s linear 0.5s;
+	transition: opacity 0.2s linear 0.5s;
+}
+
+.bl-box h2 {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.bl-main > section {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.bl-main > section.bl-expand {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.bl-main > section.bl-expand-top {
+	z-index: 100;
+}
+
+.bl-main > section:first-child.bl-expand {
+	background: rgb(13, 19, 33); 
+}
+.bl-main > section:nth-child(2).bl-expand {
+	background: rgb(242, 216, 167);
+}
+.bl-main > section:nth-child(3).bl-expand {
+	background: rgb(126, 141, 133);
+}
+.bl-main > section:nth-child(4).bl-expand {
+	background: rgb(191, 195, 186);
+}
+
+.bl-main.bl-expand-item > section:not(.bl-expand),
+.bl-main.bl-expand-item > section.bl-scale-down {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	opacity: 0;
+}
+
+
+.no-touch section:not(.bl-expand) .bl-box:hover h2{
+	-webkit-transform: translateY(-15%);
+	-moz-transform: translateY(-15%);
+	-ms-transform: translateY(-15%);
+	transform: translateY(-15%);
+	
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;	
+	opacity: 0.3;
+	margin-top: 5%;
+}
+
+section.bl-expand .bl-content,
+section.bl-expand .bl-icon-close {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s linear 0.5s;
+	-moz-transition: opacity 0.3s linear 0.5s;
+	transition: opacity 0.3s linear 0.5s;
+}
+
+
+section.bl-expand .bl-box {
+	opacity: 0;
+	-webkit-transition: opacity 0s linear;
+	-moz-transition: opacity 0s linear;
+	transition: opacity 0s linear;
+}
+
+
+
+/* END OF CONTAINER/SECTIONS STYLES **********************************************************/
+
+
+/* START OF FRONT PAGE ***********************************************************************/
+
+figure.icon-mobile{
+	display: none;
+}
+
+/* END OF FRONT PAGE *************************************************************************/
+
+
+/* START OF PORTFOLIO PAGE *******************************************************************/
+
+
+/* Panel Items */
+
+div.bl-panel-items,
+div.bl-panel-items > div {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+div.bl-panel-items > div > div {
+	width: 60%;
+	margin: 0 auto;
+	color: rgb(126, 141, 133);
+	opacity: 1;
+	bottom: 90px;
+	top: 90px;
+	pointer-events: auto;
+}
+
+div.bl-panel-items > div > div h1 {
+	font-size: 2.4em;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+
+}
+
+div.bl-panel-items > div > div p {
+	margin: 2% 0;
+	font-size: 1.3em;
+}
+
+div.bl-panel-items > div > div img {
+	float: left;
+	margin: 0 20px 20px 0;
+	max-width: 100%;
+}
+
+div.bl-panel-items {
+	top: 100%;
+	z-index: 9999;
+}
+
+div.bl-panel-items > div {
+	background: rgb(13, 19, 33); 
+	color: rgb(191, 195, 186);
+	z-index: 0;
+	opacity: 0;
+	-webkit-transform: translateY(0);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	-moz-transform: translateY(0);
+	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	transform: translateY(0);
+	transition: transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	-ms-transform: translateY(0);
+}
+
+div.bl-panel-items nav {
+	position: absolute;
+	z-index: 9999;
+	width: 216px;
+	left: 50%;
+	top: 0px;
+	margin-left: -108px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s ease-in-out 0.5s;
+	-moz-transition: opacity 0.2s ease-in-out 0.5s;
+	transition: opacity 0.2s ease-in-out 0.5s;
+}
+
+div.bl-panel-items.bl-panel-items-show nav span {
+	float: left;
+	margin: 5px;
+}
+
+div.bl-panel-items nav span.bl-next-work {
+	font-weight: 700;
+	letter-spacing: 2px;
+	display: block;
+	text-transform: uppercase;
+	line-height: 2em;
+	cursor: pointer;
+	margin-right: 2em;
+}
+
+div.bl-panel-items.bl-panel-items-show nav {
+	opacity: 1;
+	top: -65px;
+	color: rgb(191, 195, 186);
+}
+
+div.bl-panel-items.bl-panel-items-show nav .bl-icon.bl-icon-close{
+	font-size: 2em;
+}
+
+div.bl-panel-items > div.bl-show-work {
+	z-index: 1000;
+	opacity: 1;
+	-webkit-transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transform: translateY(-100%);
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	transform: translateY(-100%);
+	transition: transform 0.5s ease-in-out;
+	-ms-transform: translateY(-100%);
+}
+
+div.bl-panel-items > div.bl-hide-current-work {
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-webkit-transform: translateY(-100%) scale(0.5);
+	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-moz-transform: translateY(-100%) scale(0.5);
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transform: translateY(-100%) scale(0.5);
+	-ms-transform: translateY(-100%) scale(0.5);
+	z-index: 0;
+}
+
+div.bl-content.portfolio  p{
+	margin-top: 1%;
+    text-align: center;
+    color: rgb(126, 141, 133);
+    widtH: 60%;
+    font-size: 1.4em;
+}
+
+#bl-work-items{
+	text-align: center;
+	margin-top: 3%;
+}
+
+
+#bl-work-items li a > img{
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+}
+
+.portfolio-images{
+	margin: 0% 0 10% 0;
+	float: left;
+	clear: both;
+}
+
+/* read more button */
+
+
+/* Common button styles */
+
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button > span {
+	vertical-align: middle;
+}
+
+/* Borders */
+
+.button--border-thick {
+	border: 3px  solid rgb(126, 141, 133);
+}
+
+.button--rayen {
+	overflow: hidden;
+	padding: 0;
+	max-width: 100%;
+	width:100%;
+	height: 48px;
+	background: rgb(126, 141, 133);
+}
+
+.button--rayen::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: rgb(13, 19, 33); 
+	background: rgb(191, 195, 186);
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.button--rayen > span {
+	display: block;
+	color: white;
+}
+
+.button--rayen::before,
+.button--rayen > span {
+	padding: 1em 2em;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--rayen:hover::before {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.button--rayen:hover > span {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+
+.btn-icon{
+    background: rgb(126, 141, 133);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1.portfolio-title{
+	text-align: left;
+    float: left;
+    margin: 0;
+    padding: 1% 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(126, 141, 133);
+    font-variant: small-caps; 
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-container{
+	margin: -3% 0 0 -3%;
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+}
+
+/* expanded single item page */
+
+.website-btn{
+	margin: 0 5% 5% 0;
+	color:  rgb(191, 195, 186);
+	border: 1px solid  rgb(191, 195, 186);
+	padding: 1% 2%;
+	float: left;
+	clear: both;
+}
+
+
+a.website-btn:hover{
+	opacity: 0.3;
+	color: rgb(191, 195, 186);
+	    transform:scale(0.9);
+      -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;	
+	text-decoration: none;
+}
+
+
+/* END OF PORTFOLIO PAGE **********************************************************/
+
+/* START OF ABOUT PAGE **********************************************************/
+
+
+aside.about{
+	background: rgba(242, 216, 167, 0.75);	
+}
+
+.images-about{
+	text-align:center;
+	margin: 5% 0;
+}
+
+
+.wrapper.about{
+	position: absolute;
+	margin: 0 auto;	
+	left: 0;
+	right:0;
+	width: 60%;
+}
+
+
+/* END OF ABOUT PAGE **********************************************************/
+
+
+
+/* START OF SOCIAL MEDIA PAGE **********************************************************/
+
+
+aside.media{
+	background: rgba(126, 141, 133, 0.75);	
+}
+
+/* pinterest */
+
+.pinterest-social-btn-top{
+	width: 0;
+}
+
+/* facebook */
+
+.fts-jal-fb-header{
+	display: inline-block;
+	font-size: 0.5em;
+}
+
+.fts-jal-fb-header a, 
+.fts-jal-single-fb-post a{
+	text-transform: none;
+font-family: 'Raleway', sans-serif;	
+}
+
+.fts-jal-fb-user-thumb a img{
+	width: 50px;
+	height: 50px;
+}
+
+.fts-jal-single-fb-post{
+	margin-left: 20%;
+	width: 60%;
+}
+
+/* twitter */
+
+.fts-twitter-div{
+	overflow: hidden;	
+}
+
+.tweeter-info{
+	width: 60% ;
+	margin-left: 20%;
+}
+
+/* END OF SOCIAL MEDIA PAGE **********************************************************/
+
+/* START OF CONTACT PAGE *************************************************************/
+
+/* general */
+
+aside.contact{
+	background: rgba(191, 195, 186, 0.75);	
+}
+
+.background-image{
+	position: absolute;
+	width:100%;
+	height: 100%; 	
+    opacity: 0.3;
+}
+
+div.background-image img{
+    width: 100%;
+    height: auto;
+}
+
+.contact{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.contact img{
+	position: absolute;
+	z-index: 9999;
+	top: 0%;
+	left:0;
+	right: 25%;
+	margin: 0 auto;
+	background: rgb(126, 141, 133);
+	max-width: 100%;
+	max-height: 100%;
+}
+
+span input,
+span textarea{
+	color: rgb(126, 141, 133);
+}
+
+span.wpcf7-form-control-wrap{
+	margin-left: 2.5%;
+}
+
+.wpcf7{
+	text-align: center;
+}
+
+.wrapper.form{
+	position: relative;
+	margin: 5% 0 0 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: rgb(191, 195, 186);
+   padding: 1% 2%;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgb(191, 195, 186); 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(191, 195, 186); 
+}
+
+:-ms-input-placeholder {  
+   color: rgb(191, 195, 186); 
+}
+/* name */
+
+/* email */
+
+/* subject */
+
+/* textarea/msg */
+
+.contact.msg{
+	right: 0;
+	left: 0%;
+}
+
+textarea{
+	height: 48px;
+	position: relative;
+	transition: height 3s;
+		-webkit-transition: height 3s;
+	overflow: hidden;
+}
+
+textarea:hover,
+textarea:focus,
+textarea:active{
+	height: 350px;
+    width: 460px;
+    max-width: 100%;
+}
+
+
+/* send */
+
+.contact.send img{
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin: 0 auto;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+	    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35)
+	z-index: -1;
+}
+
+.contact.send:hover{
+	    transform:scale(0.9);
+      -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;	
+		opacity: 0.5;
+}
+
+.wpcf7-form-control.wpcf7-submit{
+	position: relative;
+	z-index: 9999;
+	background: transparent;
+	border: none;
+	color: transparent;
+}
+
+/* messages/confirmations */
+
+div.wpcf7-mail-sent-ok{
+	border: 2px solid rgb(126, 141, 133);
+	border-radius: 0;
+}
+
+div.wpcf7-response-output{
+	color: rgb(13, 19, 33); 
+}
+
+/* END OF CONTACT PAGE ****************************************************/
+
+
+/*———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————*/
+/*———————————————————————————————————————————————— START OF MEDIA QUERIES ———————————————————————————————————————————————————*/
+/*———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+/*————————————————————-—— START OF MIN-WIDTH 1200px and MAX-WIDTH 1500px (bootstrap lrg | desktop) ———————————————————-——————*/
+
+@media only screen and (min-width: 75.000em) and (max-width: 93.750em) {	
+
+}
+
+/*———————————————————————- END OF MIN-WIDTH 1200px and MAX-WIDTH 1500px (bootstrap lrg | desktop) ————————————————————————————*/
+
+/*——————————————————————- START OF MIN-WIDTH 768px and MAX-WIDTH 1199px (ipad portrait | iPad landscape) —————————————————————*/
+
+@media only screen and (min-width: 48.000em) and (max-width: 74.938em) {
+	
+	/* front page */
+	
+	.bl-box h2{
+		font-size: 1.8em;
+	}	
+	
+	/* portfolio */
+	
+	div.bl-content.portfolio p{
+		width: 80%;
+	}
+	
+	.bl-content > ul li{
+		width: 25%;
+	}
+	
+	.btn-icon{
+		width: 40px;
+	}
+	
+	.button--rayen{
+		margin: 3%;
+		height: 40px;
+	}
+
+
+	/* about page */
+	
+	.wrapper.about{
+		width: 80%;
+	}
+	
+	/* contact page */
+	
+	.contact.send img{
+		left: 0;
+		right: 0;
+	}
+	
+}
+
+/*—————————————————————— END OF MIN-WIDTH 768px and MAX-WIDTH 1199px (ipad portrait | iPad landscape) ——————————————————-—————*/
+
+/*———————————-—————————— START OF MIN-WIDTH 992px and MAX-WIDTH 1199px (bootstrap md | ipad landscape) ——————————————————-————*/
+
+@media only screen and (min-width: 62.000em) and (max-width: 74.938em) {
+	
+	/* front page */
+
+	div.front-page-tagline{
+		top: 31%;
+	}
+		
+	/* contact page */
+	
+	.contact img{
+		right: 50%;
+	}
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		height: 200px;
+		width: 450px;
+	}
+}
+
+/*——————————————————————— END OF MIN-WIDTH 992px and MAX-WIDTH 1199px (bootstrap md | ipad landscape) ————————-————————————————*/
+
+/*——————————————————————— START OF MIN-WIDTH 768px and MAX-WIDTH 991px (bootstrap sm | ipad portrait) ————————————-———————————-*/
+
+@media only screen and (min-width: 48.000em) and (max-width: 61.938em) {
+	
+	/* front page */
+	
+	.bl-box h2{
+		margin: 20% 0 0 0;
+	}
+	
+	
+	div.front-page-tagline{
+		top: 60%;
+	}
+	
+		
+	figure.icon-mobile{
+		display: block;
+	}
+	
+	figure.icon-mobile img{
+	    position: absolute;
+	    margin: 0 auto;    
+	    width: 20%;
+	    height: auto;
+	    top: 40%;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+	
+	.main-img{
+		display: none;
+	}
+
+	
+	/* contact page */
+	
+	.contact img{
+		right: 70%;
+	}
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		height: 350px;
+		width: 460px;
+	}	
+}
+
+/*———————————————————————— END OF MIN-WIDTH 768px and MAX-WIDTH 991px (bootstrap sm | ipad portrait) ———————————————————————————*/
+
+
+/*————————————— START OF MIN-WIDTH 320px and MAX-WIDTH 767px (bootstrap xs | iphone4, iphone5, iphone6, iphone6+) ——————————————*/
+
+@media only screen and (min-width: 20.000em) and (max-width: 47.938em) {
+	
+	.bl-content,
+	.bl-box {
+		font-size: 75%;
+	}
+
+	.bl-expand .bl-box {
+		height: 130px;
+	}
+
+	.bl-content > ul li {
+		width: 40%;
+	}
+
+
+	/* front page */
+					
+	figure.icon-mobile{
+		display: block;
+	}
+	
+	.main-img{
+		display: none;
+	}
+	
+	figure.icon-mobile img{
+	    position: absolute;
+	    margin: 0 auto;    
+	    height: auto;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+	
+	/* portfolio */
+	
+	.btn-icon{
+		width: 30px;
+	}
+	
+	.button--rayen{
+		margin: 3%;
+		height: 30px;
+	}
+	
+	/* single item panel */
+	
+	div.bl-panel-items > div > div{
+		width: 90%;
+	}
+	
+	/* contact page */
+	
+	.contact.send{
+		margin-bottom: 5%;
+	}
+	
+	.contact.send img{
+		left: 0;
+		right: 0;
+	}
+}
+
+/*———————————————————— END OF MIN-WIDTH 320px and MAX-WIDTH 767px (bootstrap xs | iphone4, iphone5, iphone6) ———————————————————*/
+
+
+
+/*——————————————————————— START OF MIN-WIDTH 569px and MAX-WIDTH 737px ( iphone6, iphone6+ landscape) ————————————-—————————————*/
+
+@media only screen and (min-width: 35.563em) and (max-width: 46.063em) {   
+	
+	.bl-content h1{
+		margin: 0;
+	}
+
+	/* front page */
+	
+	.bl-box h2{
+		font-size: 1.8em;
+	}	
+	
+	.bl-box h2{
+		margin: 0;
+		width: 100%;
+		font-size: 1.6em;
+	}	
+	
+	div.front-page-tagline{
+		top: 70%;
+	}
+	
+	
+	figure.icon-mobile img{ 
+	    width: 10%;
+	    top: 47%;
+	}	
+
+	/* portfolio */
+	
+	div.bl-content.portfolio p{
+		width: 80%;
+	}
+	
+	.bl-content > ul li{
+		margin-bottom: 5%;
+		width: 25%;		
+	}
+	
+
+	/* about page */
+	
+	.images-about img{
+		width: 20%;
+		height: auto;
+	}
+	
+	.wrapper.about{
+		width: 80%;
+	}
+	
+	/* social media page */
+	
+	/* contact page */
+	
+	.contact img{
+		right: 60%;
+	}
+	
+	span input, 
+	span textarea{
+		margin: 0 0 0 5%;
+		width: 60%;
+		height: 48px;
+	}
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		height: 250px;
+		width: 400px;
+		margin: 0 -5% 0 0;
+	}
+
+}
+
+/*————————————————————————— END OF MIN-WIDTH 569px and MAX-WIDTH 737px (iphone6, iphone6+ landscape) ———————————————————————————*/
+
+/*——————————————————————— START OF MIN-WIDTH 569px and MAX-WIDTH 668px ( iphone6 landscape only) ————————————-—————————————*/
+
+@media only screen and (min-width: 35.563em) and (max-width: 41.750em) {   
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		width: 360px;
+	}
+}
+
+/*——————————————————————— END OF MIN-WIDTH 569px and MAX-WIDTH 668px ( iphone6 landscape only) ————————————-—————————————*/
+
+/*————————————————————————— START OF MIN-WIDTH 416px and MAX-WIDTH 568px ( iphone4, iphone5 landscape) ————————————————————————-*/
+
+@media only screen and (min-width: 26.000em) and (max-width: 35.500em) {	
+	
+	
+	.bl-content h1{
+		margin: 0 0 4% 0;
+	}
+
+	/* front page */
+	
+	.bl-box h2{
+		margin: 0;
+		width: 100%;
+		font-size: 1.6em;
+	}
+	
+	
+	div.front-page-tagline{
+		top: 75%;
+	}
+	
+	figure.icon-mobile img{   
+	    width: 12%;
+	    top: 50%;
+	}
+
+	/* portfolio */
+	
+	div.bl-content.portfolio p{
+		width: 100%;
+	}
+	
+	.bl-content > ul li{
+		margin-bottom: 5%;
+		width: 45%;		
+	}
+
+
+	/* about page */
+	
+	.bl-content{
+		margin:0;
+		right: 0 auto;
+	}
+	
+	.images-about img{
+		width: 20%;
+		height: auto;
+	}
+	
+	.wrapper.about{
+		width: 90%;
+	}
+	
+	/* social media page */
+
+	img.pinterest,
+	img.fb,
+	img.twitter{
+		margin-top: 5%;
+		width: 10%;
+		height: auto;
+	}
+	
+	/* contact page */
+		
+	.contact img{
+		height: 40px;
+	}
+		
+	.contact img{
+		right: 71%;
+	}
+	
+	span input, 
+	span textarea{
+		width: 65%;
+		height: 40px;
+	}
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		height: 200px;
+		width: 270px;
+	}
+
+}
+
+/*————————————————————————— END OF MIN-WIDTH 416px and MAX-WIDTH 568px (iphone4, iphone5 landscape) ———————————————————————————-*/
+
+/*————————————————————————— START OF MIN-WIDTH 481px and MAX-WIDTH 568px (  iphone5 landscape only) ————————————————————————-*/
+
+@media only screen and (min-width: 30.063em) and (max-width: 35.500em) {
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		width: 325px;
+	}
+}
+
+/*————————————————————————— START OF MIN-WIDTH 481px and MAX-WIDTH 568px ( iphone5 landscape only ) ————————————————————————-*/
+
+/*————————————————— START OF MIN-WIDTH 320px and MAX-WIDTH 415px ( iphone4, iphone5, iphone6, iphone6+ portrait) ———————————————*/
+
+@media only screen and (min-width: 20.000em) and (max-width: 25.938em) {
+	
+	
+	
+	.bl-content h1{
+		margin: 0 0 4% 0;
+	}
+
+	/* front page */
+	
+	.bl-box h2{
+		font-size: 1.6em;
+	}	
+	
+	.bl-box h2{
+		margin: 10% 0;
+		width: 100%;
+		font-size: 1.4em;
+	}
+	
+	
+	div.front-page-tagline{
+		top: 75%;
+	}
+	
+	div.front-page-tagline p{
+		margin: 0 3%;		
+	}	
+
+	
+	figure.icon-mobile img{   
+	    width: 40%;
+	    top: 37%;
+	}
+
+	/* portfolio */
+	
+	div.bl-content.portfolio p{
+		width: 100%;
+	}
+	
+	.bl-content > ul li{
+		margin-bottom: 5%;
+		width: 90%;		
+	}
+
+
+	/* about page */
+	
+	.bl-content{
+		margin:0;
+		right: 0 auto;
+	}
+	
+	.images-about img{
+		width: 40%;
+		height: auto;
+	}
+	
+	.wrapper.about{
+		width: 80%;
+		left: 5%;
+		font-size: 0.8em;
+		text-align: justify;
+	}
+	
+	/* social media page */
+
+	img.pinterest,
+	img.fb,
+	img.twitter{
+		margin-top: 5%;
+		width: 20%;
+		height: auto;
+	}
+	
+	.fts-jal-single-fb-post,
+	.tweeter-info{
+		margin-left:0;
+		width: 100%;
+	}
+	
+	/* contact page */
+		
+	.contact img{
+		height: 40px;
+	}
+		
+	.contact img{
+		right: 100%;
+	}
+	
+	span input, 
+	span textarea{
+		width: 75%;
+		height: 40px;
+	}
+	
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		height: 200px;
+		width: 180px;
+	}	
+	
+	.wrapper.form {
+   	 	margin: 5% -11% 0 3%;
+	}
+}
+
+/*—————————————————— END OF MIN-WIDTH 375px and MAX-WIDTH 415px (iphone4, iphone5, iphone6, iphone6+ portrait) ——————————————————*/
+
+/*————————————————— START OF MIN-WIDTH 374px and MAX-WIDTH 415px ( iphone6, iphone6+ portrait only) ———————————————*/
+
+@media only screen and (min-width: 23.375em) and (max-width: 25.938em) {
+	
+	.contact img{
+		right: 100%;
+		left: 2%;
+	}	
+
+	textarea:hover, 
+	textarea:focus, 
+	textarea:active{
+		width: 230px;
+	}	
+
+	
+}
+
+/*————————————————— END OF MIN-WIDTH 74px and MAX-WIDTH 415px ( iphone6, iphone6+ portrait only) ———————————————*/
+
+/*———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-———————*/
+/*————————————————————————————————————————————————— END OF MEDIA QUERIES ————————————————————————————————————————————————————————*/
+/*———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-———————*/
